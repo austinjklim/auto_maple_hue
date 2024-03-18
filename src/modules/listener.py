@@ -75,8 +75,8 @@ class Listener(Configurable):
 
         config.bot.rune_active = False
 
-        if not config.enabled:
-            Listener.recalibrate_minimap()      # Recalibrate only when being enabled.
+#        if not config.enabled:
+#            Listener.recalibrate_minimap()      # Recalibrate only when being enabled.
 
 
         config.enabled = not config.enabled

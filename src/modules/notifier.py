@@ -8,7 +8,6 @@ from src.gui.notifier_settings.main import NotifSettings
 from src.gui.notifier_settings.notification_settings import NotificationSetting
 from src.gui.automation.main import AutomationParams
 import src.common.config as config
-import pyautogui
 import cv2
 from pathlib import Path
 import src.modules.automation as automation
