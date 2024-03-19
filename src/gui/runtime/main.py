@@ -27,9 +27,9 @@ class Thread_Monitor(LabelFrame):
         threadDict = {
             "bot_thread":{"entryObj":None, "status":self.botThread},
             "capture_thread":{"entryObj":None, "status":self.captureThread},
-            "listener_thread":{"entryObj":None, "status":self.notifierThread},
-            "watcher_thread":{"entryObj":None, "status":self.listenerThread},
-            "notifier_thread":{"entryObj":None, "status":self.watcherThread}
+            "listener_thread":{"entryObj":None, "status":self.listenerThread},
+            "watcher_thread":{"entryObj":None, "status":self.watcherThread},
+            "notifier_thread":{"entryObj":None, "status":self.notifierThread}
         }
 
         for thread in threadDict.keys():

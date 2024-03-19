@@ -211,10 +211,8 @@ class Watcher:
                     automation.auto2ndPW()
 
             #update all thread status (2/2) Other one in Listener
-            try:
-                config.gui.runtime_console.threadMonitor.check_threads()
-            except Exception as e:
-                print(e)
+#            if config.gui.runtime_console != None:
+#                config.gui.runtime_console.threadMonitor.check_threads()#
 
             time.sleep(0.1)
 
