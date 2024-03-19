@@ -14,7 +14,7 @@ class Details(LabelFrame):
         self.scroll = tk.Scrollbar(self)
         self.scroll.pack(side=tk.RIGHT, fill=tk.Y, pady=5)
 
-        self.text = tk.Text(self, width=1, height=10,
+        self.text = tk.Text(self, width=1, height=5,
                             yscrollcommand=self.scroll.set,
                             state=tk.DISABLED, wrap=tk.WORD)
         self.text.pack(side=tk.LEFT, expand=True, fill='both', padx=(5, 0), pady=(0, 5))

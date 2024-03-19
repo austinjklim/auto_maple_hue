@@ -149,7 +149,8 @@ class KeyBindings(LabelFrame):
         label.config(state=tk.DISABLED)
 
         def on_key_press(_):
-            k = kb.read_key()
+            #remove white space for better integration with interception
+            k = kb.read_key().replace(' ', '')
             if action != self.prev_a:
                 self.prev_k = ''
                 self.prev_a = action

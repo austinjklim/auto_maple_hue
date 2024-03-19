@@ -7,6 +7,7 @@ import inspect
 import importlib
 import traceback
 from interception import press
+import interception
 from os.path import splitext, basename
 from src.common import config, utils
 from src.routine import components
@@ -84,6 +85,11 @@ class Bot(Configurable):
         last_fed = time.time()
         last_enteredCS = time.time()
         last_30m_expbuffed = None
+
+        #Capture device
+        interception.auto_capture_devices(keyboard=True, mouse=True)
+        config.gui.view.interceptionconsole.set_mouseID(interception.get_mouse())
+        config.gui.view.interceptionconsole.set_keyboardID(interception.get_keyboard())
         
         while True:
             if config.enabled and len(config.routine) > 0:
