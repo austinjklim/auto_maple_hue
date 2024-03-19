@@ -48,6 +48,8 @@ class Watcher:
     ALERTS_DIR = os.path.join('assets', 'alerts')
 
     def __init__(self):
+        config.watcher = self
+
         self.ready = False
         self.thread = threading.Thread(target=self._main)
         self.thread.daemon = True
@@ -189,7 +191,7 @@ class Watcher:
             
 
             try:
-                config.gui.runtime_console.runtimeFlags.update_All_Flags()
+                config.gui.runtime_console.thread_monitor.update_All_Flags()
             except:
                 pass
 
@@ -207,6 +209,12 @@ class Watcher:
                 autosecondaryToggle = AutomationParams('Automation Settings').get("auto_2ndPW_toggle")
                 if autosecondaryToggle:
                     automation.auto2ndPW()
+
+            #update all thread status (2/2) Other one in Listener
+            try:
+                config.gui.runtime_console.threadMonitor.check_threads()
+            except Exception as e:
+                print(e)
 
             time.sleep(0.1)
 

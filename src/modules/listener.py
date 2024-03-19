@@ -57,6 +57,12 @@ class Listener(Configurable):
                     Listener.record_position()
             time.sleep(0.01)
 
+            #update all thread status (1/2) Other one in watcher
+            try:
+                config.gui.runtime_console.threadMonitor.check_threads()
+            except Exception as e:
+                print(e)
+
     def restricted_pressed(self, action):
         """Returns whether the key bound to ACTION is pressed only if the bot is disabled."""
 

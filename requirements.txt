@@ -1,6 +1,6 @@
 discord.py==2.3.2
 GitPython
-interception_python==0.0.1
+interception-python
 keyboard==0.13.5
 mss==9.0.1
 numpy==1.25.2
@@ -11,4 +11,5 @@ PyAutoGUI==0.9.54
 pygame==2.5.1
 pyotp==2.9.0
 pytz==2023.3
+requests
 pywin32

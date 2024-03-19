@@ -41,6 +41,12 @@ capture = None
 # Shares the keyboard listener
 listener = None
 
+# Shares the notifier
+notifier = None
+
+# Shares the watcher object
+watcher = None
+
 # Shares the gui to all modules
 gui = None
 

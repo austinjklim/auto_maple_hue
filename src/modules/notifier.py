@@ -14,6 +14,8 @@ import src.modules.automation as automation
 
 class Notifier:
     def __init__(self):
+        config.notifier = self
+
         self.ready = False
         self.thread = threading.Thread(target=self._main)
         self.thread.daemon = True

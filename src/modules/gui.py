@@ -15,7 +15,7 @@ class GUI:
         'Edit': '1300x750',
         'Settings': '750x850',
         'Notifier': '600x775',
-        'Monitoring': '400x575',
+        'Monitoring': '400x800',
         'Automation': '400x525'
     }
 
